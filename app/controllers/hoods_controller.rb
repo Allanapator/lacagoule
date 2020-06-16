@@ -4,5 +4,6 @@ class HoodsController < ApplicationController
   end
 
   def show
+    @hood = Hood.find(params[:id])
   end
 end
