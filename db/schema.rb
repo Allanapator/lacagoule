@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_141757) do
+ActiveRecord::Schema.define(version: 2020_06_16_125351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 2020_06_15_141757) do
     t.bigint "hood_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "date"
+    t.integer "violence_required"
+    t.string "location"
     t.index ["hood_id"], name: "index_contracts_on_hood_id"
     t.index ["user_id"], name: "index_contracts_on_user_id"
   end
