@@ -20,12 +20,12 @@ User.create!(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com", pas
 
 puts "HOOD"
 
-Hood.create!(name: "Bob", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 3)
-Hood.create!(name: "Alex", city: "Bordeaux", description: "Chaud enarts martiaux", skills: "ceinture noir", price: 800, rating: 5)
-Hood.create!(name: "Allan", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 2)
-Hood.create!(name: "Julie", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 4)
-Hood.create!(name: "Jules", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 4)
-Hood.create!(name: "Matthieu", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 1)
+Hood.create!(name: "Bob", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 3, violence_range: 2)
+Hood.create!(name: "Alex", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 5, violence_range: 3)
+Hood.create!(name: "Allan", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 3, violence_range: 2)
+Hood.create!(name: "Julie", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 4, violence_range: 1)
+Hood.create!(name: "Jules", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 4, violence_range: 3)
+Hood.create!(name: "Matthieu", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 3, violence_range: 2)
 
 
 
