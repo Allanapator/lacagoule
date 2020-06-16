@@ -1,0 +1,29 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1705&q=80);">
+  <div class="container ">
+    <h1>Our <strong>Hoods</strong></h1>
+    <p>They are </p>
+    <div class="d-flex align-items-end flex-column bd-highlight mb-3">
+      <div class="mt-auto p-2 bd-highlight">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class = container>
+  <div class ="row">
+    <% @hoods.each do |hood| %>
+      <div class ="col-xs-12 col-md-6 col-lg-3">
+        <div class ="d-flex justify-content-around">
+          <div class ="card mt-3 shadow bg-white rounded">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1572983423767-fa0ff3d2bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="Photo de chaque hoodman">
+            <div class="card-body">
+              <h5 class="card-title"><%= hood.name %></h5>
+              <p class="card-text">Un problème avec quelqu'un ? Contactez moi pour lui péter la gueule!</p>
+              <%= link_to "See more", hood_path(hood), class:"btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
