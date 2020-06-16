@@ -1,0 +1,22 @@
+<div class="container d-flex justify-content-center my-3">
+  <div class="card mb-3" style="width: 700px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="https://picsum.photos/200" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div><h4 class="card-title"><%=@hood.name%></h4></div>
+          <div> <%= link_to %></div>
+            <p class="card-text"><%= @hood.city %></p>
+          <div class="d-flex ">
+            <div>
+            <p class="card-text align-self-end" >Tarif indicatif</p>
+            <p class="card-text"><%=@hood.price%> €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
