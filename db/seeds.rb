@@ -5,9 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Hood.create(name: "Bob", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800)
-Hood.create(name: "Alex", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800)
-Hood.create(name: "Allan", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800)
-Hood.create(name: "Julie", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800)
-Hood.create(name: "Jules", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800)
-Hood.create(name: "Matthieu", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800)
+Hood.destroy_all
+
+Hood.create(name: "Bob", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800, rating: 3)
+Hood.create(name: "Alex", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800, rating: 5)
+Hood.create(name: "Allan", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800, rating: 2)
+Hood.create(name: "Julie", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800, rating: 4)
+Hood.create(name: "Jules", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800, rating: 4)
+Hood.create(name: "Matthieu", city: "Bordeaux", description: "J'aime niquer des mères", skills: "ceinture noir", price: 800, rating: 1)
