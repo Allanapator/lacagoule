@@ -17,6 +17,7 @@ User.create!(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com", pas
 # User.delete(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com")
 # User.delete(name: "Mikado", city: "Mulhouse", email: "mikadohmstr@gmail.com")
 
+
 puts "HOOD"
 
 Hood.create!(name: "Bob", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 3)
@@ -27,13 +28,9 @@ Hood.create!(name: "Jules", city: "Bordeaux", description: "Chaud en arts martia
 Hood.create!(name: "Matthieu", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 1)
 
 
+
 puts "Contract"
 Contract.create!(name: "Casser la gueue de ma voisine", description: "Ma voisine me fait chier je veux que qqn aille lui casser la gueule mais pas trop non plus", location: "Bordeaux", violence_required: 1, user_id: User.first.id, hood_id: Hood.first.id)
 Contract.create!(name: "j'aime pas ce mec", description: "Bjr merci de KC au max la geul de ce mec que jem pas merci il a réyé ma kess", location: "Bordeaux", violence_required: 2, user_id: User.first.id, hood_id: Hood.first.id)
 Contract.create!(name: "Mon boss m'a pas payé", description: "Mon boss a encore oublié de me payer ce mois ci c'est la goutte d'eau", location: "Bordeaux", violence_required: 3, user_id: User.first.id, hood_id: Hood.first.id)
 puts "finished"
-
-
-
-
-

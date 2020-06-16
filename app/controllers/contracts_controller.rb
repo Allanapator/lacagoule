@@ -1,4 +1,5 @@
 class ContractsController < ApplicationController
+  before_action :set_hood, only: [:new, :create]
   def index
     @contracts = Contract.all
   end
@@ -19,5 +20,15 @@ class ContractsController < ApplicationController
     else
       render :new
     end
+  end
+
+  private
+
+  def set_hood
+    @hood = Hood.find(params[:hood_id])
+  end
+
+  def contract_params
+    params.require(:contract).permit(:name, :violence_required, :description, :location, :date)
   end
 end
