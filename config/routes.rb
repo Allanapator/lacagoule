@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :hoods, only: [:index, :show]
-  resources :hoods do
+  resources :hoods, only: [:index, :show] do
     resources :contracts, only: [:new, :create]
   end
   resources :contracts, only: [:show, :index]
