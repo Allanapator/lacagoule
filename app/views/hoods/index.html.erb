@@ -18,8 +18,19 @@
             <div class="card-body">
               <div class="d-flex justify-content-between">
                 <h5 class="card-title"><%= hood.name %></h5>
-                <p>
-
+                <p class="stars">
+                  <% if (5 - 3) != 0 %>
+                    <% 3.times do %>
+                      <i class="fas fa-star"></i>
+                    <% end %>
+                    <% (5 - 3).times do %>
+                      <i class="far fa-star"></i>
+                    <% end %>
+                    <% else %>
+                      <% 5.times do %>
+                        <i class="fas fa-star"></i>
+                      <% end %>
+                  <% end %>
                 </p>
               </div>
               <p class="card-text"><%= hood.description %></p>
