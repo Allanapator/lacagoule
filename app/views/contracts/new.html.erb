@@ -1,6 +1,8 @@
 <%= simple_form_for [@hood, @contract] do |f|%>
   <%= f.input :name %>
   <%= f.input :description %>
-
+  <%= f.input :location %>
+  <%= f.input :date %>
+  <%= f.input :violence_required %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
