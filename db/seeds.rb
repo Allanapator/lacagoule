@@ -17,6 +17,7 @@ User.create!(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com", pas
 # User.delete(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com")
 # User.delete(name: "Mikado", city: "Mulhouse", email: "mikadohmstr@gmail.com")
 
+
 puts "HOOD"
 
 Hood.create!(name: "Bob", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 3)
@@ -25,6 +26,7 @@ Hood.create!(name: "Allan", city: "Bordeaux", description: "Chaud en arts martia
 Hood.create!(name: "Julie", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 4)
 Hood.create!(name: "Jules", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 4)
 Hood.create!(name: "Matthieu", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "ceinture noir", price: 800, rating: 1)
+
 
 
 puts "Contract"
