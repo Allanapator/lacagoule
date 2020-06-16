@@ -1,0 +1,47 @@
+<div class="container">
+  <h1><%= @contract.name %></h1>
+  <p><%= @contract.hood.name %></p>
+
+  <%= link_to "Back to all contracts", contracts_path %>
+  <div class="card">
+    <div class="card-header">
+     Target
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= image_tag("https://resize-parismatch.lanmedia.fr/r/625,417,forcex,center-middle/img/var/news/storage/images/paris-match/actu/international/trump-signe-la-loi-imposant-des-sanctions-contre-le-gazoduc-nord-stream-1666064/27168956-1-fre-FR/Trump-signe-la-loi-imposant-des-sanctions-contre-le-gazoduc-Nord-Stream.jpg") %></p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+     Description
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= @contract.description %></p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+     Date
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= @contract.date %></p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+     Location
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= @contract.location %></p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+     Degré de violence souhaité
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= @contract.violence_required %></p>
+    </div>
+  </div>
+</div>
+
