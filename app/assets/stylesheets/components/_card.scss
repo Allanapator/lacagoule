@@ -1,12 +1,41 @@
-.card{
+#card-hood{
   border-radius: 8px;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   &:hover{
     box-shadow: 0 0 20px black;
-    color: red;
   }
 }
 .card-img-top{
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+}
+.card{
+  position: relative;
+}
+.card-price{
+  display: flex;
+  position: relative;
+  position: absolute;
+  top: 300px;
+  left: 190px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #F7F7F7;
+  background: white;
+  border-radius: 25px;
+  text-align: center;
+  padding: 4px 8px;
+}
+.card-price p{
+  margin: 0;
+  padding: 0;
+}
+.stars{
+  color: gold;
+}
+.lvl-violence{
+  position: relative;
+  position: absolute;
+  color: red;
+  margin: 16px;
 }
