@@ -16,7 +16,7 @@ class ContractsController < ApplicationController
     @contract = Contract.new(contract_params)
     @contract.hood = @hood
     if @contract.save
-      redirect_to hood_contracts_path
+      redirect_to contract_path(@contract)
     else
       render :new
     end
