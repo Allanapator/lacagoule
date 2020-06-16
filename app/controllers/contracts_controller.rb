@@ -14,6 +14,7 @@ class ContractsController < ApplicationController
 
   def create
     @contract = Contract.new(contract_params)
+    @contract.user = current_user
     @contract.hood = @hood
     if @contract.save
       redirect_to contract_path(@contract)
@@ -29,6 +30,6 @@ class ContractsController < ApplicationController
   end
 
   def contract_params
-    params.require(:contract).permit(:name, :violence_required, :description, :location, :date)
+    params.require(:contract).permit(:name, :description, :date, :violence_required, :location)
   end
 end
