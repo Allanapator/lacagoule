@@ -7,14 +7,13 @@
       <div class="col-md-8">
         <div class="card-body">
           <div><h4 class="card-title"><%=@hood.name%></h4></div>
-          <div> <%= link_to %></div>
+          <div> <%= link_to "Proposer un projet", new_hood_contract_path(@hood)%></div>
             <p class="card-text"><%= @hood.city %></p>
-          <div class="d-flex ">
-            <div>
-            <p class="card-text align-self-end" >Tarif indicatif</p>
+          <div>
+            <p class="card-text">Tarif indicatif</p>
             <p class="card-text"><%=@hood.price%> €</p>
-            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
