@@ -14,6 +14,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
+  <% if controller_name == 'hoods' && action_name == 'index' %>
+    <body class="hoods-background">
+  <% end %>
   <body>
     <% if user_signed_in? %>
     <%= render 'shared/navbar' %>
