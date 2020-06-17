@@ -32,6 +32,12 @@
           <% end %>
         </td>
         <td><%= link_to "Show", contract_path(contract), class:"btn btn-secondary my-2" %></td>
+        <td>
+          <%= link_to contract_path(contract), method: :delete,
+            data: { confirm: "Are you sure?" } do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
+        </td>
       </tr>
     <% end %>
 
