@@ -5,17 +5,17 @@
       <p><span id="banner-typed-text"></span></p>
       <p>We have some badass who can do it for you</p>
         <div class="container-home-button">
-
-          <%= form_tag hoods_path, method: :get do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Choose by city"
-            %>
-            <%= submit_tag "Discover the Hoods", class: "btn btn-primary" %>
-          <% end %>
-
-
+          <div class="form-row">
+              <div class="col-7">
+              <%= form_tag hoods_path, method: :get do %>
+                <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control",
+                  placeholder: "Choose by city" %>
+                <%= submit_tag "Discover the Hoods", class: "btn btn-primary mt-3" %>
+              <% end %>
+              </div>
+          </div>
         </div>
       </div>
     </div>
