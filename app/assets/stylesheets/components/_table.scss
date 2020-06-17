@@ -1,0 +1,17 @@
+table {
+  width: 80%;
+}
+
+th {
+  height: 50px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+table.center {
+  margin-left:auto;
+  margin-right:auto;
+}
