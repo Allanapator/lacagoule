@@ -1,46 +1,39 @@
-<div class="container">
-  <h1><%= @contract.name %></h1>
-  <p><%= @contract.hood.name %></p>
 
-  <%= link_to "Back to all contracts", contracts_path %>
-  <div class="card">
-    <div class="card-header">
-     Target
-    </div>
-    <div class="card-body">
-      <p class="card-text"><%= image_tag("https://resize-parismatch.lanmedia.fr/r/625,417,forcex,center-middle/img/var/news/storage/images/paris-match/actu/international/trump-signe-la-loi-imposant-des-sanctions-contre-le-gazoduc-nord-stream-1666064/27168956-1-fre-FR/Trump-signe-la-loi-imposant-des-sanctions-contre-le-gazoduc-Nord-Stream.jpg") %></p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-     Description
-    </div>
-    <div class="card-body">
-      <p class="card-text"><%= @contract.description %></p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-     Date
-    </div>
-    <div class="card-body">
-      <p class="card-text"><%= @contract.date %></p>
+<div class="container">
+  <div class="container d-flex justify-content-center my-3">
+    <div class="card mb-3 w-75">
+      <div class="row no-gutters">
+        <div class="card-role">
+          <p><i class="fas fa-boxing-glove"></i></p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://resize-parismatch.lanmedia.fr/r/625,417,forcex,center-middle/img/var/news/storage/images/paris-match/actu/international/trump-signe-la-loi-imposant-des-sanctions-contre-le-gazoduc-nord-stream-1666064/27168956-1-fre-FR/Trump-signe-la-loi-imposant-des-sanctions-contre-le-gazoduc-Nord-Stream.jpg" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+            <div><h4 class="card-title"><%=@contract.name%></h4></div>
+            </div>
+              <p class="card-text"><i class="fas fa-map-marker-alt"></i>  <%= @contract.location %></p>
+              <p class="card-text"><i class="fas fa-euro-sign"></i>  <%=@contract.hood.price%></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header">
-     Location
-    </div>
-    <div class="card-body">
-      <p class="card-text"><%= @contract.location %></p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-     Degré de violence souhaité
-    </div>
-    <div class="card-body">
-      <p class="card-text"><%= @contract.violence_required %></p>
+  <div class="container d-flex justify-content-center my-3">
+    <div class="card w-75">
+      <div class="card-body">
+        <h5 class="card-title">Description: </h5>
+        <p class="card-text"><%= @contract.description %></p>
+        <h5 class="card-title">Violence</h5>
+                  <div>
+                    <% @contract.violence_required.times do %>
+                      <i class="fas fa-tint"></i>
+                    <% end %>
+                  </div>
+        <%= link_to "Back", hoods_path, class:"btn btn-secondary" %>
+      </div>
     </div>
   </div>
 </div>
