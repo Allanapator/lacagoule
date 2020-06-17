@@ -41,8 +41,17 @@
               <div class="lvl-violence d-flex justify-content-between">
                 <p>Aggressivity: </p>
                 <div>
-                  <% hood.violence_range.times do %>
-                    <i class="fas fa-tint"></i>
+                  <% if (3 - hood.violence_range) != 0 %>
+                    <% hood.violence_range.times do %>
+                      <i class="fas fa-tint"></i>
+                    <% end %>
+                    <% (3 - hood.violence_range).times do %>
+                      <i class="fas fa-tint drop-vide"></i>
+                    <% end %>
+                  <% else %>
+                    <% 3.times do %>
+                      <i class="fas fa-tint"></i>
+                    <% end %>
                   <% end %>
                 </div>
               </div>
