@@ -1,4 +1,5 @@
 class ContractsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_hood, only: [:new, :create]
   def index
     @contracts = Contract.all
