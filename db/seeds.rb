@@ -33,7 +33,4 @@ Hood.create!(name: "Carlito", city: "Bordeaux", description: "Attention je mords
 
 
 puts "Contract"
-Contract.create!(name: "Casser la gueule de ma voisine", description: "Ma voisine me fait chier je veux que qqn aille lui casser la gueule mais pas trop non plus", location: "Bordeaux", violence_required: 1, user_id: User.first.id, hood_id: Hood.first.id)
-Contract.create!(name: "j'aime pas ce mec", description: "Bjr merci de KC au max la geul de ce mec que jem pas merci il a réyé ma kess", location: "Bordeaux", violence_required: 2, user_id: User.first.id, hood_id: Hood.first.id)
-Contract.create!(name: "Mon boss m'a pas payé", description: "Mon boss a encore oublié de me payer ce mois ci c'est la goutte d'eau", location: "Bordeaux", violence_required: 3, user_id: User.first.id, hood_id: Hood.first.id)
 puts "finished"
