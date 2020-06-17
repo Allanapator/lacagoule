@@ -12,6 +12,7 @@ User.delete_all
 puts "User"
 
 User.create!(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com", password:"secret")
+User.create!(name: "Kebab", city: "Bordeaux", email: "allan@gmail.com", password:"secret")
 
 # User.delete(name: "LilDicky", city: "Bordeaux", email: "lildickyhmstr@gmail.com")
 # User.delete(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com")
