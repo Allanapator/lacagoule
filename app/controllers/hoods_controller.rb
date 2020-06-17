@@ -1,7 +1,11 @@
 class HoodsController < ApplicationController
   layout "applicationn", only: [:show]
   def index
-    @hoods = Hood.all
+     if params[:query].present?
+      @hoods = Hood.where(city: params[:query])
+    else
+      render 'index'
+    end
   end
 
   def show
