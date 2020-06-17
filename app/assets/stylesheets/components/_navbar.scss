@@ -3,6 +3,7 @@
   position: absolute;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,9 +14,17 @@
   width: 40px;
 }
 
-.nav-link{
+.navbar-light .navbar-nav .nav-link {
   color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  &:hover{
+    color: white;
+    opacity: 1;
+  }
 }
-#navbarSupportedContent{
-  color: white;
+
+.item_de_nav{
+  display: flex;
+  justify-content: end;
 }
