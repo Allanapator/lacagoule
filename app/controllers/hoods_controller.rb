@@ -1,4 +1,5 @@
 class HoodsController < ApplicationController
+  layout "applicationn", only: [:show]
   def index
     @hoods = Hood.all
   end
