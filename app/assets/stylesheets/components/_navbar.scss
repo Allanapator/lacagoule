@@ -1,6 +1,9 @@
 .navbar-lewagon {
+  display: flex;
+  position: absolute;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +12,19 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  &:hover{
+    color: white;
+    opacity: 1;
+  }
+}
+
+.item_de_nav{
+  display: flex;
+  justify-content: end;
 }
