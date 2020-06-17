@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :hoods, only: [:index, :show] do
     resources :contracts, only: [:new, :create]
   end
-  resources :contracts, only: [:show, :index]
+  resources :contracts, only: [:show, :index, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
