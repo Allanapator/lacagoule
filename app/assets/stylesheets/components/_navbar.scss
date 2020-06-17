@@ -1,5 +1,6 @@
 .navbar-lewagon {
   display: flex;
+  position: absolute;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -24,6 +25,42 @@
 }
 
 .item_de_nav{
+  display: flex;
+  justify-content: end;
+}
+
+
+
+
+
+
+.navbar-lewagonn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+}
+
+.navbar-lewagonn .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagonn .navbar-brand img {
+  width: 40px;
+}
+
+.navbarr-light .navbar-nav .nav-link {
+  color: black;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  &:hover{
+    color: black;
+    opacity: 1;
+  }
+}
+
+.item_de_navv{
   display: flex;
   justify-content: end;
 }
