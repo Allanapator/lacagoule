@@ -1,4 +1,5 @@
 class ContractsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_hood, only: [:new, :create]
   before_action :set_contract, only: [:show, :destroy]
   def index
