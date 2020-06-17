@@ -12,6 +12,7 @@ User.delete_all
 puts "User"
 
 User.create!(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com", password:"secret")
+User.create!(name: "Kebab", city: "Bordeaux", email: "allan@gmail.com", password:"secret")
 
 # User.delete(name: "LilDicky", city: "Bordeaux", email: "lildickyhmstr@gmail.com")
 # User.delete(name: "Kebab", city: "Bordeaux", email: "kebabhmstr@gmail.com")
@@ -26,7 +27,7 @@ Hood.create!(name: "Allan", city: "Bordeaux", description: "Chaud en arts martia
 Hood.create!(name: "Julie", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "Ancien taulard", price: 200, rating: 4, violence_range: 1)
 Hood.create!(name: "Jules", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "Bucheron", price: 500, rating: 4, violence_range: 3)
 Hood.create!(name: "Matthieu", city: "Bordeaux", description: "Chaud en arts martiaux", skills: "Slap world champion", price: 1000, rating: 3, violence_range: 2)
-Hood.create!(name: "Fabiola", city: "Bordeaux", description: "Met des coups de parapluie comme personne", skills: "Jiu-Jitsu", price: 300, rating: 3, violence_range: 3)
+Hood.create!(name: "Fabiola", city: "Bordeaux", description: "Pro des coups de parapluie", skills: "Jiu-Jitsu", price: 300, rating: 3, violence_range: 3)
 Hood.create!(name: "Carlito", city: "Bordeaux", description: "Manie sa hâche parfaitement", skills: "Fils de Ragnar Lodbrok", price: 800, rating: 3, violence_range: 3)
 
 
