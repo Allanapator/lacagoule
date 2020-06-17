@@ -11,7 +11,7 @@
   border-top-left-radius: 8px;
 }
 
-.card{
+.card-body{
   position: relative;
   color: #484848;
 }
@@ -19,8 +19,8 @@
 .card-price{
   display: flex;
   position: absolute;
-  top: 300px;
-  left: 105px;
+  top: -15px;
+  left: 100px;
   justify-content: center;
   align-items: center;
   background: white;
@@ -40,7 +40,7 @@
   position: absolute;
   font-size: 10px;
   color: #465192;
-  top: 305px;
+  top: -10px;
   left: 10px;
   background: white;
   padding: 4px 8px;

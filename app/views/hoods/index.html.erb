@@ -17,6 +17,25 @@
           <div class ="card mt-3" id="card-hood">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1572983423767-fa0ff3d2bf81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="Photo de chaque hoodman">
             <div class="card-body">
+              <div class="card-price" >
+                <p><%= hood.price %>€</p>
+              </div>
+              <div class="stars">
+                <p>
+                  <% if (5 - hood.rating) != 0 %>
+                    <% hood.rating.times do %>
+                      <i class="fas fa-star"></i>
+                    <% end %>
+                    <% (5 - hood.rating).times do %>
+                      <i class="far fa-star"></i>
+                    <% end %>
+                  <% else %>
+                    <% 5.times do %>
+                      <i class="fas fa-star"></i>
+                    <% end %>
+                  <% end %>
+                </p>
+              </div>
               <h5 class="card-title"><%= hood.name %></h5>
               <p class="card-text"><%= hood.description %></p>
               <div class="lvl-violence d-flex justify-content-between">
@@ -29,25 +48,7 @@
               </div>
               <%= link_to "See more", hood_path(hood), class:"button-card d-flex justify-content-center" %>
             </div>
-            <div class="card-price" >
-                <p><%= hood.price %>€</p>
-            </div>
-            <div class="stars">
-              <p>
-                <% if (5 - hood.rating) != 0 %>
-                  <% hood.rating.times do %>
-                    <i class="fas fa-star"></i>
-                  <% end %>
-                  <% (5 - hood.rating).times do %>
-                    <i class="far fa-star"></i>
-                  <% end %>
-                <% else %>
-                  <% 5.times do %>
-                    <i class="fas fa-star"></i>
-                  <% end %>
-                <% end %>
-              </p>
-            </div>
+
           </div>
         </div>
       </div>
