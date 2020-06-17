@@ -1,11 +1,11 @@
 class ContractsController < ApplicationController
   before_action :set_hood, only: [:new, :create]
+  before_action :set_contract, only: [:show, :destroy]
   def index
     @contracts = Contract.all
   end
 
   def show
-    @contract = Contract.find(params[:id])
   end
 
   def new
@@ -23,7 +23,18 @@ class ContractsController < ApplicationController
     end
   end
 
+  def destroy
+    @contract.user = current_user
+    @contract.hood = @hood
+    @contract.destroy
+    redirect_to contracts_path
+  end
+
   private
+
+  def set_contract
+  @contract = Contract.find(params[:id])
+  end
 
   def set_hood
     @hood = Hood.find(params[:hood_id])
