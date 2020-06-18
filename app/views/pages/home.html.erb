@@ -4,14 +4,25 @@
       <h1><strong>Welcome to the Hood</strong></h1>
       <p><span id="banner-typed-text"></span></p>
       <p>We have some badass who can do it for you</p>
-        <div class="container-home-button">
-          <div class="home_button">
-            <%= link_to "Discover the Hoods", hoods_path, class:"btn btn-light"%>
+
+    </div>
+  </div>
+  <div class="searchdiv">
+          <div class="searchcontainer">
+          <%= form_tag(hoods_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search],
+          autocomplete: "off",
+          placeholder: "Where ?" %>
+          <div class="searchbar"></div>
+          <% end %>
           </div>
         </div>
-      </div>
-    </div>
 </div>
+
+
+
+
+
 
 
 
