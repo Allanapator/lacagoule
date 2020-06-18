@@ -1,16 +1,23 @@
-.our-footer{
-  background: red;
-  height: 100px;
-
+.footer-background{
+  background: #333333;
 }
-
-.our-footer p{
-  margin: 0;
+.color-item{
+  color: #A00021;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  &:hover{
+    color: #A00021;
+    opacity: 1;
+    text-decoration: none;
+  }
 }
-
-.our-footer .container{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+.text-color{
+  color: #A00021;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  &:hover{
+    color: #A00021;
+    opacity: 1;
+    text-decoration: none;
+  }
 }
