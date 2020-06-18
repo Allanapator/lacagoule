@@ -10,6 +10,13 @@
 </div>
 
 <div class = "container">
+  <% if  %>
+    <% @hoods.count == 0 %>
+    <h5 class="error-title" >Sorry, there are no Hoods in this city: <%= params[:search].to_s %> </h5>
+    <h5 class="error-title"> Try an other city</h5>
+    <%= link_to "Search again", root_path, class:"btn btn-secondary" %>
+  <% end %>
+
   <div class ="row colonne">
     <% @hoods.each do |hood| %>
       <div class ="col-xs-12 col-md-6 col-lg-3">
