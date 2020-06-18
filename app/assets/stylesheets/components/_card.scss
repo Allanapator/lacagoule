@@ -1,12 +1,12 @@
+.show-box{
+  margin: 0 150px 20px 150px;
+}
 .card-hood{
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   &:hover{
     box-shadow: 0 0 20px black;
   }
-}
-
-.card-title{
 }
 
 .card-img-top{
@@ -18,11 +18,17 @@
   position: relative;
   color: #484848;
 }
+.card-body-show{
+  position: relative;
+  color: #484848;
+  margin-top: 10px;
+}
 .card-body-header{
   text-align: center;
   position: relative;
   padding: 20px;
   padding-top: 120px;
+  padding-bottom: 50px;
   color: #484848;
 }
 
@@ -97,7 +103,7 @@ padding: 0;
 
 .contract-header{
   position: relative;
-  margin-top: 120px;
+  margin: 120px 0 16px 0;
 }
 .contract-image{
     position: absolute;
