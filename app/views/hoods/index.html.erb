@@ -8,6 +8,12 @@
     </div>
   </div>
 </div>
+<%= form_tag(hoods_path, method: "get") do%>
+<select name=hood, class="form-control">
+  <option value="None">Filter by</option>
+  <option value="violence">Violence</option>
+</select>
+<% end %>
 
 <div class = "container">
 
