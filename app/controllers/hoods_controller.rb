@@ -1,9 +1,8 @@
 class HoodsController < ApplicationController
   layout "applicationn", only: [:show]
  def index
-  @hoods = Hood.all
   if Hood.search(params[:search]).blank?
-    @hoods = Hood.all
+    @hoods = Hood.search(params[:search])
   else
     @hoods = Hood.search(params[:search])
   end
