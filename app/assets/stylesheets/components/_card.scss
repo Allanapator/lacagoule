@@ -34,6 +34,7 @@
   position: relative;
   color: #484848;
   margin-top: 10px;
+  padding: 30px;
 }
 .card-body-header{
   text-align: center;
@@ -179,20 +180,20 @@ padding: 0;
 
 .role {
   position: absolute;
-  top: -100px;
-  background:gradient( linear, left top, left bottom, color-stop(0.05, #a00033), color-stop(1, #690124) );
-  background:linear-gradient( center top, #a00033 5%, #690124 100% );
-  background-color:#a00033;
-  border-radius:28px;
-  display:inline-block;
-  color:#ffffff;
-  font-size:16px;
-  height:38px;
-  line-height:38px;
-  width:167px;
-  text-decoration:none;
-  text-align:center;
-  text-shadow:1px 1px 0px #a00033;
+    margin: auto;
+    top: -100px;
+    right: 100px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px $rouge,
+                inset 0 0 0 5px #000000,
+                inset 0 0 0 5px #000000,
+                inset 0 0 0 5px #000000,
+                inset 0 0 0 5px #000000,;
+    background: white;
+    overflow: hidden;
 }.button-rouge:hover {
   color: #ffffff;
   text-decoration: none;
@@ -202,6 +203,42 @@ padding: 0;
   position:relative;
   top:1px;
 }
+
+
+.violence-date{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.card-title-block{
+  border: 0 1px 0 1px solid #a00033;
+  align:center;
+  min-width: 100px;
+  float: left;
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.block-content{
+  color: #a00033;
+  font-size: 25px;
+  font-weight: 3px;
+}
+
+.location{
+  font-weight: lighter;
+}
+
+.file-name{
+  letter-spacing: 2px;
+  opacity: 0.5;
+  position: absolute;
+  color: grey;
+  margin: auto;
+  top: 10px;
+  right: 0;
+  left: 15px;
 
 .card-product {
   overflow: hidden;
@@ -242,4 +279,5 @@ padding: 0;
 .card-product .card-product-infos {
   margin: 10px;
   width: 100%;
+
 }
