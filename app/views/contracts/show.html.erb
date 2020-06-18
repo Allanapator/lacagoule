@@ -1,13 +1,9 @@
-
 <div class="container">
-  <div class="container d-flex justify-content-center my-3">
-    <div class="card mb-3 w-75 contract-header">
-      <div class="row no-gutters justify-content-center">
-<!--         <div class="card-role">
-          <p><i class="fas fa-boxing-glove"></i></p>
-
-          </div> -->
-          <div class="col-md-4 contract-image wants-role">
+  <div class="show-box">
+    <div class="card mb-3 contract-header">
+      <div class="justify-content-center">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-8 contract-image wants-role">
             <% if @contract.photo.attached? %>
               <%= cl_image_tag @contract.photo.key, height: 200, width: 200, crop: :fill %>
             <% else %>
@@ -18,35 +14,32 @@
           <%= link_to "Back", hoods_path, class:"btn-back" %>
           <div class="col-md-8">
             <div class="card-body-header">
-              <div><h4 class="card-title"><strong><%=@contract.name%></strong></h4></div>
+              <div>
+                <h4 class="card-title"><strong><%=@contract.name.capitalize%></strong></h4>
+              </div>
               <p class="card-text"><i class="fas fa-map-marker-alt"></i>  <%= @contract.location.upcase %></p>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <div class="d-flex justify-content-between">
-            <div><h4 class="card-title"><%=@contract.name%></h4></div>
-            </div>
-              <p class="card-text"><i class="fas fa-map-marker-alt"></i>  <%= @contract.location %></p>
-
-              <p class="card-text"><i class="fas fa-euro-sign"></i>  <%=@contract.hood.price%></p>
-              <%= link_to "Hood profile", hoods_path, class:"button button-rouge" %>
+                <p class="card-text"><i class="fas fa-euro-sign"></i>  <%=@contract.hood.price%></p>
+                <%= link_to "Hood profile", hoods_path, class:"button button-rouge" %>
             </div>
           </div>
-      </div>
+          <div class="col-md-8">
+          </div>
+        </div>
     </div>
-  </div>
-  <div class="container d-flex justify-content-center my-3">
-    <div class="card w-75">
-      <div class="card-body">
-        <h5 class="card-title">Description: </h5>
-        <p class="card-text"><%= @contract.description %></p>
-        <h5 class="card-title">Violence</h5>
-                  <div>
-                    <% @contract.violence_required.times do %>
-                      <i class="fas fa-tint"></i>
-                    <% end %>
-                  </div>
-      </div>
+    </div>
+    <div class="row no-gutters justify-content-center">
+       <div class="card w-100">
+          <div class="card-body-show">
+            <h5 class="card-title">Description: </h5>
+            <p class="card-text"><%= @contract.description %></p>
+            <h5 class="card-title">Violence</h5>
+            <div>
+              <% @contract.violence_required.times do %>
+                <i class="fas fa-tint"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </div>
