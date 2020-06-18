@@ -1,10 +1,11 @@
-<div class="container mt-3">
+<div class="container my-3">
   <%= simple_form_for [@hood, @contract] do |f|%>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :location %>
     <%= f.input :date %>
     <%= f.input :violence_required%>
+    <%= f.input :photo, as: :file %>
     <%= f.button :submit, class: "btn btn-primary ml-3" %>
   <% end %>
 
