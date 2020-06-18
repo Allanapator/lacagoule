@@ -25,7 +25,6 @@ require("channels")
 // External imports
 import "bootstrap";
 import { loadDynamicBannerText } from '../components/banner';
-import { placesAutocomplete } from '../components/init_autocomplete'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 document.addEventListener('turbolinks:load', () => {
