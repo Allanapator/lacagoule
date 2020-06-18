@@ -2,13 +2,12 @@ class HoodsController < ApplicationController
   layout "applicationn", only: [:show]
  def index
   @hoods = Hood.all
-  if params[:search]
-    @hoods = Hood.search(params[:search])
-  else
+  if Hood.search(params[:search]).blank?
     @hoods = Hood.all
+  else
+    @hoods = Hood.search(params[:search])
   end
  end
-
   def show
     @hood = Hood.find(params[:id])
   end
