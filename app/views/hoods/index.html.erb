@@ -8,12 +8,18 @@
     </div>
   </div>
 </div>
-<%= form_tag(hoods_path, method: "get") do%>
-<select name=hood, class="form-control">
-  <option value="None">Filter by</option>
-  <option value="violence">Violence</option>
-</select>
-<% end %>
+<%= form_tag(hoods_path, method: "get") do %>
+  <%= label_tag(:q, "Filter by") %>
+  <select name="hoods">
+    <option value="all">Violence</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <% end %>
+  </select>
+  <%= submit_tag("Search") %>
+
+
 
 <div class = "container">
 
