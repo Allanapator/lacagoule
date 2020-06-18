@@ -8,42 +8,43 @@
     </div>
   </div>
 </div>
-
-<table class="center">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-      <th>Location</th>
-      <th>Violence Required</th>
-
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @contracts.each do |contract| %>
+<div class="body-contrat">
+  <table class="center">
+    <thead>
       <tr>
-        <td><%= contract.name.capitalize %></td>
-        <td><%= contract.date %></td>
-        <td><%= contract.location.capitalize %></td>
-        <td><% contract.violence_required.times do%>
-          <i class="fas fa-tint"></i>
-          <% end %>
-        </td>
-        <td><%= link_to "Show", contract_path(contract), class:"btn btn-secondary my-2" %></td>
-        <td>
-          <%= link_to contract_path(contract), method: :delete,
-            data: { confirm: "Are you sure?" } do %>
-            <i class="far fa-trash-alt"></i>
-          <% end %>
-        </td>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Violence Required</th>
+
+        <th colspan="3"></th>
       </tr>
-    <% end %>
+    </thead>
+
+    <tbody>
+      <% @contracts.each do |contract| %>
+        <tr>
+          <td><%= contract.name.capitalize %></td>
+          <td><%= contract.date %></td>
+          <td><%= contract.location.capitalize %></td>
+          <td><% contract.violence_required.times do%>
+            <i class="fas fa-tint"></i>
+            <% end %>
+          </td>
+          <td><%= link_to "Show", contract_path(contract), class:"btn btn-secondary my-2" %></td>
+          <td>
+            <%= link_to contract_path(contract), method: :delete,
+              data: { confirm: "Are you sure?" } do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
 
 
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
 
 <br>
 
