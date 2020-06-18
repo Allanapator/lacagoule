@@ -12,26 +12,27 @@
 <div class="block">
   <div class="row">
     <div class="col-xs-12 col-md-6 col-lg-7">
-      <%= simple_form_for [@hood, @contract] do |f|%>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :location %>
-        <%= f.input :date %>
-        <%= f.input :violence_required%>
-        <%= f.input :photo, as: :file %>
-        <%= f.button :submit, class: "btn btn-primary ml-3" %>
-      <% end %>
-
-      <%= link_to "Back", hood_path(@hood), class:"btn btn-secondary mt-3 ml-3" %>
+      <div class="block-form">
+        <%= simple_form_for [@hood, @contract] do |f|%>
+          <h4><%= f.input :name %></h4>
+          <h4><%= f.input :description %></h4>
+          <h4><%= f.input :location %></h4>
+          <h4><%= f.input :date %></h4>
+          <h4><%= f.input :violence_required%></h4>
+          <h4><%= f.input :photo, as: :file %></h4>
+          <%= f.button :submit, class: "button-card-form" %>
+        <% end %>
+      </div>
     </div>
-    <div class="col-xs-12 col-md-6 col-lg-5">
+
+    <div class="col-xs-12 col-md-6 col-lg-3">
       <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <img src=<%= @hood.url %> />
         <div class="card-product-infos">
           <div class="block-name-star">
             <h2><%= @hood.name %></h2>
             <div class="stars-new">
-              <p>
+              <p class="ml-3">
                 <% if (5 - @hood.rating) != 0 %>
                   <% @hood.rating.times do %>
                     <i class="fas fa-star"></i>
@@ -47,9 +48,30 @@
               </p>
             </div>
           </div>
-          <p><%= @hood.description %></p>
+          <p class="description"><%= @hood.description %></p>
         </div>
+        <div class="lvl-violence d-flex justify-content-between">
+          <p class="ml-3 mt-5">Aggressivity : </p>
+          <div class="ml-3 mt-5">
+            <% if (3 - @hood.violence_range) != 0 %>
+              <% @hood.violence_range.times do %>
+                <i class="fas fa-tint"></i>
+              <% end %>
+              <% (3 - @hood.violence_range).times do %>
+                <i class="fas fa-tint drop-vide"></i>
+              <% end %>
+            <% else %>
+              <% 3.times do %>
+                <i class="fas fa-tint"></i>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <p class="respond mt-5 ml-3"><%= @hood.name %> responds in 1 hour on average.</p>
       </div>
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-1">
+      <%= link_to "Back", hood_path(@hood), class:"btn btn-secondary mt-3 ml-3" %>
     </div>
   </div>
 </div>
