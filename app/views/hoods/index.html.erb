@@ -50,7 +50,7 @@
               <p class="card-text mt-3"><%= hood.skills.capitalize %></p>
               <p class="hood-city"><i class="fas fa-map-marker-alt mr-2"></i><%= hood.city.capitalize %></p>
               <div class="lvl-violence d-flex justify-content-between">
-                <p class="mt-2">Aggressivity : </p>
+                <p class="mt-2 aggressivity">Aggressivity : </p>
                 <div class="mt-2">
                   <% if (3 - hood.violence_range) != 0 %>
                     <% hood.violence_range.times do %>
@@ -68,7 +68,6 @@
               </div>
               <%= link_to "See more", hood_path(hood), class:"button-card d-flex justify-content-center" %>
             </div>
-
           </div>
         </div>
       </div>

@@ -78,27 +78,14 @@
   justify-content: center;
   border-radius: 25px;
 }
-.stars-new{
-  display: flex;
-  position: absolute;
-  font-size: 10px;
-  color: gold;
-  top: -10px;
-  left: 100px;
-  background: white;
-  padding: 4px 8px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-}
+
 
 .stars p{
 margin: 0;
 padding: 0;
 }
 
-.lvl-violence p{
+.lvl-violence .aggressivity{
   color: #484848;
 }
 
@@ -210,17 +197,23 @@ padding: 0;
 }
 
 .card-product {
+  display: flex;
+  position: relative;
   overflow: hidden;
   margin-right: 50px;
+  margin-left: 50px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 8px;
-  height: 200px;
+  height: 185px;
 }
 
 .card-product img {
+  display: flex;
+  position: absolute;
+  top: 10px;
   margin-left: 10px;
   height: 80px;
   width: 80px;
@@ -229,15 +222,26 @@ padding: 0;
 }
 
 .card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 600;
   margin: 0;
+  color: #484848;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
+.card-product .respond{
+  display: flex;
+  position: absolute;
+  color: #484848;
+  margin-bottom: 0;
+}
+
+.card-product p{
+  color: #484848;
+}
+
+.card-product-infos .description {
+  font-size: 16px;
+  color: #484848;
   margin-bottom: 0;
   margin-top: 8px;
 }
@@ -246,6 +250,33 @@ padding: 0;
   position: relative;
 }
 .card-product .card-product-infos {
+  position: absolute;
+  top: 10px;
+  right: -115px;
   margin: 10px;
   width: 100%;
+}
+.stars-new p{
+  display: flex;
+  position: absolute;
+  font-size: 12px;
+  color: gold;
+  top: 5px;
+  left: 80px;
+  background: white;
+  padding: 4px 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.block-form{
+  border:1px solid transparent;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  background: white;
 }
