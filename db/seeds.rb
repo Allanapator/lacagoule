@@ -23,5 +23,7 @@ Hood.create!(name: "Jules", city: "Bordeaux", description: "Combattant de rue", 
 Hood.create!(name: "Matthieu", city: "Bordeaux", description: "Besoin de thune", skills: "Slap world champion", price: 1000, rating: 3, violence_range: 2)
 Hood.create!(name: "Fabiola", city: "Bordeaux", description: "Pro du parapluie", skills: "Jiu-Jitsu", price: 300, rating: 3, violence_range: 3)
 Hood.create!(name: "Carlito", city: "Bordeaux", description: "Attention je mords", skills: "Fils de Ragnar Lodbrok", price: 800, rating: 3, violence_range: 3)
+Hood.create!(name: "Bob", city: "Paris", description: "Chaud en arts martiaux", skills: "ceinture noire Judo", price: 800, rating: 3, violence_range: 2)
+Hood.create!(name: "Bob", city: "Nantes", description: "Chaud en arts martiaux", skills: "ceinture noire Judo", price: 800, rating: 3, violence_range: 2)
 puts "Contract"
 puts "finished"

@@ -5,9 +5,14 @@
       <div class="row no-gutters justify-content-center">
 <!--         <div class="card-role">
           <p><i class="fas fa-boxing-glove"></i></p>
+
           </div> -->
           <div class="col-md-4 contract-image wants-role">
-            <img src="https://resize-parismatch.lanmedia.fr/r/625,417,forcex,center-middle/img/var/news/storage/images/paris-match/actu/international/trump-signe-la-loi-imposant-des-sanctions-contre-le-gazoduc-nord-stream-1666064/27168956-1-fre-FR/Trump-signe-la-loi-imposant-des-sanctions-contre-le-gazoduc-Nord-Stream.jpg" alt="...">
+            <% if @contract.photo.attached? %>
+              <%= cl_image_tag @contract.photo.key, height: 200, width: 200, crop: :fill %>
+            <% else %>
+              <%= cl_image_tag("izscg7g1bbr6pngllryx", height: 200, width: 200, crop: :fill) %>
+            <% end %>
             <p class="role"><i class="fas fa-boxing-glove"></i></p>
           </div>
           <%= link_to "Back", hoods_path, class:"btn-back" %>
@@ -15,6 +20,14 @@
             <div class="card-body-header">
               <div><h4 class="card-title"><strong><%=@contract.name%></strong></h4></div>
               <p class="card-text"><i class="fas fa-map-marker-alt"></i>  <%= @contract.location.upcase %></p>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+            <div><h4 class="card-title"><%=@contract.name%></h4></div>
+            </div>
+              <p class="card-text"><i class="fas fa-map-marker-alt"></i>  <%= @contract.location %></p>
+
               <p class="card-text"><i class="fas fa-euro-sign"></i>  <%=@contract.hood.price%></p>
               <%= link_to "Hood profile", hoods_path, class:"button button-rouge" %>
             </div>
