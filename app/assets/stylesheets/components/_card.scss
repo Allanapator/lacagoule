@@ -3,10 +3,22 @@
 }
 .card-hood{
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 black;
+  transition: box-shadow 5s ease-out;
+  transition: top 1s ease-out;;
   &:hover{
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 15px 15px #6F6F70;
+    top: -10px;
   }
+}
+.text-header{
+  color: #484848;
+  border-bottom: 1px solid #484848;
+}
+
+.card-image{
+  height: 250px;
+  object-fit: cover;
 }
 
 .card-img-top{
@@ -101,6 +113,23 @@ padding: 0;
   padding: 0;
 }
 
+
+.name-hood{
+  color: white;
+  display: flex;
+  position: absolute;
+  top: -65px;
+  text-shadow: 0 0 5px black;
+}
+
+.hood-city{
+  color: white;
+  display: flex;
+  position: absolute;
+  top: -35px;
+  font-size: 12px;
+  text-shadow: 0 0 5px black;
+}
 .contract-header{
   position: relative;
   margin: 120px 0 16px 0;
