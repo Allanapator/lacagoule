@@ -18,7 +18,8 @@ class ContractsController < ApplicationController
     @contract = Contract.new(contract_params)
     @contract.user = current_user
     @contract.hood = @hood
-    if @contract.save
+    if @contract.valid?
+      @contract.save!
       redirect_to contract_path(@contract)
     else
       render :new
@@ -43,6 +44,6 @@ class ContractsController < ApplicationController
   end
 
   def contract_params
-    params.require(:contract).permit(:name, :description, :date, :violence_required, :location)
+    params.require(:contract).permit(:name, :description, :date, :violence_required, :location, :photo)
   end
 end
