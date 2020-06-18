@@ -1,9 +1,12 @@
-#card-hood{
+.card-hood{
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   &:hover{
     box-shadow: 0 0 20px black;
   }
+}
+
+.card-title{
 }
 
 .card-img-top{
@@ -13,6 +16,13 @@
 
 .card-body{
   position: relative;
+  color: #484848;
+}
+.card-body-header{
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  padding-top: 120px;
   color: #484848;
 }
 
@@ -66,7 +76,6 @@ padding: 0;
 .lvl-violence .drop-vide{
   color: rgba(0,0,0, 0.3);
 }
-
 .card-role{
   display: flex;
   position: absolute;
@@ -84,4 +93,63 @@ padding: 0;
 .card-role p{
   margin: 0;
   padding: 0;
+}
+
+.contract-header{
+  position: relative;
+  margin-top: 120px;
+}
+.contract-image{
+    position: absolute;
+    margin: auto;
+    top: -100px;
+    right: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px $rouge,
+                inset 0 0 0 5px #000000,
+                inset 0 0 0 5px #000000,
+                inset 0 0 0 5px #000000,
+                inset 0 0 0 5px #000000,;
+    background: white;
+    overflow: hidden;
+    animation: mvTop 1.5s;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+}
+
+// .wants-role{
+//   position: relative;
+// }
+
+.role {
+  position: absolute;
+  top: -100px;
+  background:gradient( linear, left top, left bottom, color-stop(0.05, #a00033), color-stop(1, #690124) );
+  background:linear-gradient( center top, #a00033 5%, #690124 100% );
+  background-color:#a00033;
+  border-radius:28px;
+  display:inline-block;
+  color:#ffffff;
+  font-size:16px;
+  height:38px;
+  line-height:38px;
+  width:167px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #a00033;
+}.button-rouge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color:#82002b;
+}.button-rouge:active {
+  text-decoration:none;
+  position:relative;
+  top:1px;
 }

@@ -1,18 +1,25 @@
 
 <div class="container">
   <div class="container d-flex justify-content-center my-3">
-    <div class="card mb-3 w-75">
-      <div class="row no-gutters">
-        <div class="card-role">
+    <div class="card mb-3 w-75 contract-header">
+      <div class="row no-gutters justify-content-center">
+<!--         <div class="card-role">
           <p><i class="fas fa-boxing-glove"></i></p>
-        </div>
-        <div class="col-md-4">
-        <% if @contract.photo.attached? %>
-            <%= cl_image_tag @contract.photo.key, height: 200, width: 200, crop: :fill %>
-          <% else %>
-              <%= cl_image_tag("izscg7g1bbr6pngllryx", height: 200, width: 200, crop: :fill) %>
-        <% end %>
 
+          </div> -->
+          <div class="col-md-4 contract-image wants-role">
+            <% if @contract.photo.attached? %>
+              <%= cl_image_tag @contract.photo.key, height: 200, width: 200, crop: :fill %>
+            <% else %>
+              <%= cl_image_tag("izscg7g1bbr6pngllryx", height: 200, width: 200, crop: :fill) %>
+            <% end %>
+            <p class="role"><i class="fas fa-boxing-glove"></i></p>
+          </div>
+          <%= link_to "Back", hoods_path, class:"btn-back" %>
+          <div class="col-md-8">
+            <div class="card-body-header">
+              <div><h4 class="card-title"><strong><%=@contract.name%></strong></h4></div>
+              <p class="card-text"><i class="fas fa-map-marker-alt"></i>  <%= @contract.location.upcase %></p>
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -20,9 +27,11 @@
             <div><h4 class="card-title"><%=@contract.name%></h4></div>
             </div>
               <p class="card-text"><i class="fas fa-map-marker-alt"></i>  <%= @contract.location %></p>
+
               <p class="card-text"><i class="fas fa-euro-sign"></i>  <%=@contract.hood.price%></p>
+              <%= link_to "Hood profile", hoods_path, class:"button button-rouge" %>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -37,7 +46,6 @@
                       <i class="fas fa-tint"></i>
                     <% end %>
                   </div>
-        <%= link_to "Back", hoods_path, class:"btn btn-secondary" %>
       </div>
     </div>
   </div>
