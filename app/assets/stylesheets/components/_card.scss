@@ -1,5 +1,5 @@
 .show-box{
-  margin: 0 150px 20px 150px;
+  margin: 0 150px 50px 150px;
 }
 .card-hood{
   border-radius: 8px;
@@ -62,6 +62,14 @@
 .card-price p{
   margin: 0;
   padding: 0;
+}
+
+.borders-rounded{
+  border-radius: 0 0 8px 8px;
+}
+
+.borders-rounded-header{
+  border-radius: 8px 8px 0 0;
 }
 
 .stars{
@@ -158,8 +166,29 @@ padding: 0;
       height: 100%;
       object-fit: cover;
     }
-
 }
+// .relative{
+//   width: 300px;
+//   height: 300px;
+//   border-radius: 50%;
+//   box-shadow: 0 0 0 5px $rouge,
+//                 inset 0 0 0 5px #000000,
+//                 inset 0 0 0 5px #000000,
+//                 inset 0 0 0 5px #000000,
+//                 inset 0 0 0 5px #000000,;
+//   position:relative;
+// }
+// .relative:after{
+//   content:"";
+//   position:absolute;
+//   top: 105px;
+//   left: 105px;
+//   right: 105px;
+//   bottom: 105px;
+//   background: red;
+// }
+
+
 .violence-date{
   margin-top: 50px;
   text-align: center;
@@ -181,8 +210,18 @@ padding: 0;
   font-weight: 3px;
 }
 
+.block-content-hood{
+  color: #a00033;
+  font-weight: 3px;
+}
+
 .location{
   font-weight: lighter;
+  letter-spacing: 2px
+}
+
+.description{
+  text-justify: distribute;
 }
 
 .file-name{
