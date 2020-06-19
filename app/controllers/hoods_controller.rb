@@ -1,12 +1,17 @@
 class HoodsController < ApplicationController
   layout "applicationn", only: [:show]
-   def index
-    if Hood.search(params[:search]).blank?
-      @hoods = Hood.search(params[:search])
-    else
-      @hoods = Hood.search(params[:search])
+  def index
+    @hoods = Hood.search(params[:search])
+    if params[:query].present?
+      @hoods = Hood.search(params[:search]).where(violence_range: params[:query])
     end
-   end
+    if params[:query_price].present? && params[:query_price] == "1"
+      @hoods = Hood.search(params[:search]).order(price: :asc)
+    end
+    if params[:query_price].present? && params[:query_price] == "2"
+      @hoods = Hood.search(params[:search]).order(price: :desc)
+    end
+  end
 
   def show
     @hood = Hood.find(params[:id])
