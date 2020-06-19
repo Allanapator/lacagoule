@@ -14,7 +14,7 @@
     <div class="col-xs-12 col-md-6 col-lg-7">
       <div class="block-form form-style">
         <%= simple_form_for [@hood, @contract] do |f|%>
-          <%= f.input :name, label: "Target's name" %>
+          <%= f.input :name %>
           <%= f.input :description, :as => :text, :input_html => { 'rows' => 5, 'cols' => 7 } %>
           <%= f.input :location%>
           <%= f.input :date %>
