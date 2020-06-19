@@ -1,5 +1,4 @@
 class HoodsController < ApplicationController
-  layout "applicationn", only: [:show]
  def index
   if Hood.search(params[:search]).blank?
     @hoods = Hood.search(params[:search])
