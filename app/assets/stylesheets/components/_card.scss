@@ -199,6 +199,8 @@ padding: 0;
 .card-product {
   display: flex;
   position: relative;
+  position: sticky;
+  top: 20px;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);

@@ -27,8 +27,18 @@
           <td><%= contract.name.capitalize %></td>
           <td><%= contract.date %></td>
           <td><%= contract.location.capitalize %></td>
-          <td><% contract.violence_required.times do%>
-            <i class="fas fa-tint"></i>
+          <td class="lvl-violence">
+            <% if (3 - contract.violence_required) != 0 %>
+              <% contract.violence_required.times do %>
+                <i class="fas fa-tint"></i>
+              <% end %>
+              <% (3 - contract.violence_required).times do %>
+                <i class="fas fa-tint drop-vide"></i>
+              <% end %>
+            <% else %>
+              <% 3.times do %>
+                <i class="fas fa-tint"></i>
+              <% end %>
             <% end %>
           </td>
           <td><%= link_to "Show", contract_path(contract), class:"btn btn-secondary my-2" %></td>

@@ -19,8 +19,8 @@
                 <h4 class="card-title"><strong><%=@contract.name.capitalize%></strong></h4>
               </div>
               <p class="card-text location"><i class="fas fa-map-marker-alt"></i>  <%= @contract.location.upcase %></p>
-                <p class="card-text"><i class="fas fa-euro-sign"></i>  <%=@contract.hood.price%></p>
-                <%= link_to "Hood profile", hoods_path, class:"button button-rouge" %>
+              <p class="card-text"><i class="fas fa-euro-sign"></i>  <%=@contract.hood.price%></p>
+              <%= link_to @contract.hood.name + "'s profile", hood_path(@hood), class:'button button-rouge' %>
             </div>
           </div>
           <div class="col-md-8">
@@ -38,19 +38,19 @@
                 <h5 class="card-title">Violence Required</h5>
                 <div class="block-content">
                   <div class="mt-2">
-                  <% if (3 - @contract.violence_required) != 0 %>
-                    <% @contract.violence_required.times do %>
-                      <i class="fas fa-tint"></i>
+                    <% if (3 - @contract.violence_required) != 0 %>
+                      <% @contract.violence_required.times do %>
+                        <i class="fas fa-tint"></i>
+                      <% end %>
+                      <% (3 - @contract.violence_required).times do %>
+                        <i class="fas fa-tint drop-vide"></i>
+                      <% end %>
+                    <% else %>
+                      <% 3.times do %>
+                        <i class="fas fa-tint"></i>
+                      <% end %>
                     <% end %>
-                    <% (3 - @contract.violence_required).times do %>
-                      <i class="fas fa-tint drop-vide"></i>
-                    <% end %>
-                  <% else %>
-                    <% 3.times do %>
-                      <i class="fas fa-tint"></i>
-                    <% end %>
-                  <% end %>
-                </div>
+                  </div>
                 </div>
               </div>
               <div class="card-title-block">
