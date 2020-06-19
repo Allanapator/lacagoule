@@ -9,6 +9,46 @@
   </div>
 </div>
 
+
+
+<!-- FILTRES -->
+<div class="container d-flex justify-content-around mt-3">
+  <div class="select-violence">
+    <div>
+      <%= form_tag(hoods_path, method: "get", class:"form-inline") do %>
+        <%= label_tag(:query, "Filter by: ", class:"pr-3") %>
+         <%= hidden_field_tag :search, params[:search] %>
+          <select name="query" class="select-css">
+            <option value="">Violence</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <% end %>
+          </select>
+        </div>
+     <div> <%= submit_tag("Search", class:"btn btn-secondary ml-3") %> </div>
+  </div>
+
+  <div class="select-price">
+    <div class="form-inline">
+      <%= form_tag(hoods_path, method: "get" ) do %>
+        <% label_tag(:query_price, class:"pr-3") %>
+         <%= hidden_field_tag :search, params[:search] %>
+          <select name="query_price" class="select-css">
+            <option value="">prix</option>
+            <option value="1">Croissant</option>
+            <option value="2">Decroissant</option>
+            <% end %>
+          </select>
+        </div>
+      <div> <%= submit_tag("Search", class:"btn btn-secondary ml-3") %></div>
+  </div>
+</div>
+
+<!-- FIN DES FILTRES -->
+
+
+
 <div class = "container">
 
   <% if  %>
