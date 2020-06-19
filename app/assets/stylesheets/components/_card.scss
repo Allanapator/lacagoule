@@ -1,5 +1,5 @@
 .show-box{
-  margin: 0 150px 20px 150px;
+  margin: 0 150px 50px 150px;
 }
 .card-hood{
   border-radius: 8px;
@@ -34,6 +34,7 @@
   position: relative;
   color: #484848;
   margin-top: 10px;
+  padding: 30px;
 }
 .card-body-header{
   text-align: center;
@@ -63,6 +64,14 @@
   padding: 0;
 }
 
+.borders-rounded{
+  border-radius: 0 0 8px 8px;
+}
+
+.borders-rounded-header{
+  border-radius: 8px 8px 0 0;
+}
+
 .stars{
   display: flex;
   position: absolute;
@@ -78,12 +87,13 @@
   border-radius: 25px;
 }
 
+
 .stars p{
 margin: 0;
 padding: 0;
 }
 
-.lvl-violence p{
+.lvl-violence .aggressivity{
   color: #484848;
 }
 
@@ -156,35 +166,154 @@ padding: 0;
       height: 100%;
       object-fit: cover;
     }
-
 }
-
-// .wants-role{
-//   position: relative;
+// .relative{
+//   width: 300px;
+//   height: 300px;
+//   border-radius: 50%;
+//   box-shadow: 0 0 0 5px $rouge,
+//                 inset 0 0 0 5px #000000,
+//                 inset 0 0 0 5px #000000,
+//                 inset 0 0 0 5px #000000,
+//                 inset 0 0 0 5px #000000,;
+//   position:relative;
+// }
+// .relative:after{
+//   content:"";
+//   position:absolute;
+//   top: 105px;
+//   left: 105px;
+//   right: 105px;
+//   bottom: 105px;
+//   background: red;
 // }
 
-.role {
+
+.violence-date{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.card-title-block{
+  border: 0 1px 0 1px solid #a00033;
+  align:center;
+  min-width: 100px;
+  float: left;
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.block-content{
+  color: #a00033;
+  font-size: 25px;
+  font-weight: 3px;
+}
+
+.block-content-hood{
+  color: #a00033;
+  font-weight: 3px;
+}
+
+.location{
+  font-weight: lighter;
+  letter-spacing: 2px
+}
+
+.description{
+  text-justify: distribute;
+}
+
+.file-name{
+  letter-spacing: 2px;
+  opacity: 0.5;
   position: absolute;
-  top: -100px;
-  background:gradient( linear, left top, left bottom, color-stop(0.05, #a00033), color-stop(1, #690124) );
-  background:linear-gradient( center top, #a00033 5%, #690124 100% );
-  background-color:#a00033;
-  border-radius:28px;
-  display:inline-block;
-  color:#ffffff;
-  font-size:16px;
-  height:38px;
-  line-height:38px;
-  width:167px;
-  text-decoration:none;
-  text-align:center;
-  text-shadow:1px 1px 0px #a00033;
-}.button-rouge:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color:#82002b;
-}.button-rouge:active {
-  text-decoration:none;
-  position:relative;
-  top:1px;
+  color: grey;
+  margin: auto;
+  top: 10px;
+  right: 0;
+  left: 15px;
+}
+
+.card-product {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  height: 185px;
+}
+
+.card-product img {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  margin-left: 10px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #484848;
+}
+
+.card-product .respond{
+  display: flex;
+  position: absolute;
+  color: #484848;
+  margin-bottom: 0;
+}
+
+.card-product p{
+  color: #484848;
+}
+
+.card-product-infos .description {
+  font-size: 16px;
+  color: #484848;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.block-name-star{
+  display:flex;
+  position: relative;
+}
+.card-product .card-product-infos {
+  position: absolute;
+  top: 10px;
+  right: -115px;
+  margin: 10px;
+  width: 100%;
+}
+.stars-new p{
+  display: flex;
+  position: absolute;
+  font-size: 12px;
+  color: gold;
+  top: 5px;
+  left: 80px;
+  background: white;
+  padding: 4px 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.block-form{
+  border:1px solid transparent;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  background: white;
 }
