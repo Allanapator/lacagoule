@@ -7,6 +7,7 @@ class ContractsController < ApplicationController
   end
 
   def show
+    @hood = @contract.hood
   end
 
   def new
@@ -35,7 +36,7 @@ class ContractsController < ApplicationController
   private
 
   def set_contract
-  @contract = Contract.find(params[:id])
+    @contract = Contract.find(params[:id])
   end
 
   def set_hood

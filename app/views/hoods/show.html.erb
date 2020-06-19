@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<div class="container d-flex justify-content-center my-3">
+  <div class="card mb-3 w-75">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src= <%= @hood.url %>, class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+          <div><h4 class="card-title"><%=@hood.name%></h4></div>
+          <div> <%= link_to "Create contract", new_hood_contract_path(@hood), class:"btn btn-secondary"%></div>
+=======
 <div class="container">
   <div class="show-box">
     <div class="card mb-3 contract-header borders-rounded-header">
@@ -7,6 +20,7 @@
           <div class="col-md-8 contract-image">
             <img src= <%= @hood.url %> class="card-img" alt="...">
             <p class="role"><i class="fas fa-boxing-glove $rouge"></i></p>
+>>>>>>> master
           </div>
           <%= link_to "Back", hoods_path, class:"btn-back" %>
           <div class="col-md-8">
