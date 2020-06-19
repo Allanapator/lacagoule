@@ -8,7 +8,6 @@ class ContractsController < ApplicationController
 
   def show
     @hood = @contract.hood
-    console
   end
 
   def new
