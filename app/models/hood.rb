@@ -9,4 +9,5 @@ class Hood < ApplicationRecord
   def self.search(search)
     where("city ILIKE ?", "%#{search}%")
   end
+
 end

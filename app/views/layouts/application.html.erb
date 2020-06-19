@@ -16,10 +16,7 @@
 
 
   <body>
-
-    <% if user_signed_in? %>
-    <%= render 'shared/navbar' %>
-    <% end %>
+    <%= render 'shared/navbar' if user_signed_in? %>
 
     <% unless user_signed_in? %>
       <%= link_to "Log in", new_user_session_path, class:"button-login" %>
@@ -28,9 +25,7 @@
     <%= yield %>
     <%= render 'shared/flashes' %>
 
-    <% if controller_name == 'pages' && action_name == 'home' %>
-
-    <% else %>
+    <% unless controller_name == 'pages' && action_name == 'home' %>
       <%= render 'shared/footer' %>
     <% end %>
   </body>
